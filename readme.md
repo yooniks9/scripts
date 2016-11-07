@@ -2,7 +2,7 @@
 
 ```
 # Operating system variables (*required)
- user=`"linux_username"`
+ user="linux_username"
 
 # Database variables (*required)
  db_user="db_user"
