@@ -1,4 +1,4 @@
-### 請編輯 vim/nano，換上db資訊
+### edit the script, update your database variables
 
 ```
 # Operating system variables (*required)
@@ -10,15 +10,20 @@
  db_host="localhost"
  db_name="db_name"
 ```
+### make it executable 
 
-### 加上 cronjob
+```
+# chmod +x *.sh
+```
+
+### add into cronjob
 
 ```
 # crontab -e
 ```
 
 ```
-0 * * * * /home/tenten/scripts/sql-hourly-backup.sh
-0 9 * * * /home/tenten/scripts/sql-daily-backup.sh
-0 0 1 * * /home/tenten/scripts/sql-monthly-backup.sh
+0 * * * * /home/linux_username/scripts/sql-hourly-backup.sh
+0 9 * * * /home/linux_username/scripts/sql-daily-backup.sh
+0 0 1 * * /home/linux_username/scripts/sql-monthly-backup.sh
 ```
