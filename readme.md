@@ -23,7 +23,7 @@
 ```
 
 ```
-0 * * * * /home/linux_username/scripts/sql-hourly-backup.sh
-0 9 * * * /home/linux_username/scripts/sql-daily-backup.sh
-0 0 1 * * /home/linux_username/scripts/sql-monthly-backup.sh
+0 * * * * /home/linux_username/scripts/sql-hourly-backup.sh > /dev/null 2>&1
+0 9 * * * /home/linux_username/scripts/sql-daily-backup.sh > /dev/null 2>&1
+0 0 1 * * /home/linux_username/scripts/sql-monthly-backup.sh > /dev/null 2>&1
 ```
