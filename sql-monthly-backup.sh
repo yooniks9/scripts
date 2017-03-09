@@ -1,5 +1,5 @@
 #!/bin/bash
-# By: Roy Tan @ Tentencreative | Nov 7, 2016
+# # MySQL/MariaDB Backup monthlu Scripts (MAX:6 backups/year) By: Roy Tan @ Tentencreative | Nov 7, 2016
 # Operating system variables (*required)
  user="linux_username"
 
