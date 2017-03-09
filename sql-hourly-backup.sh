@@ -1,5 +1,5 @@
 #!/bin/bash
-# By: Roy Tan @ Tentencreative | Nov 7, 2016
+# # MySQL/MariaDB Backup hourly Scripts (MAX:24 backups/day) By: Roy Tan @ Tentencreative | Nov 7, 2016
 # Operating system variables (*required)
  user="linux_username"
 
