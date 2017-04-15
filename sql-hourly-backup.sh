@@ -10,7 +10,7 @@
  db_name="db_name"
 
 # Backup path (DO NOT CHANGE)
- path="/home/$user/SQLbackup/$db_name/hourly"
+ path="/home/$user/SQLbackup/$db_name-hourly"
  logs="/home/$user/logs"
 
 # System time variables (DO NOT CHANGE)
