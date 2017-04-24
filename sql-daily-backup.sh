@@ -16,7 +16,7 @@
 # System time variables (DO NOT CHANGE)
  day=$(date +"%m.%d.%Y")
  fulldate=$(date +"%c")
- date=$(date +"%m.%d.%Y|%H:%M")
+ date=$(date +"%m.%d.%Y-%H:%M")
 
 # Create directory (command)
  mkdir -p $path
