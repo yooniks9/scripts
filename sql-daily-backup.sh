@@ -28,5 +28,5 @@
 # Record logs (command)
  echo "[daily] backup $db_name is completed on $fulldate" >> $logs/MySQL-daily-backup.log
 
-# Clean up files longer than 30 days [ 30 x 1440 = 21600 ] (command)
- find $path/*.sql -type f -mmin +43200  -exec rm {} \;
+# Clean up files longer than 15 days [ 15 x 1440 = 21600 ] (command)
+ find $path/*.sql -type f -mmin +21600  -exec rm {} \;
