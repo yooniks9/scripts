@@ -1,5 +1,5 @@
 #!/bin/bash
-# MySQL/MariaDB Backup Daily Scripts (MAX:30 backups) By: Roy Tan @ Tentencreative | Nov 7, 2016
+# MySQL/MariaDB Backup Daily Scripts (MAX:15 backups) By: Roy Tan @ Tentencreative | Nov 7, 2016
 # Operating system variables (*required)
  user="linux_username"
 
