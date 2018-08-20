@@ -23,7 +23,7 @@
  mkdir -p $logs
 
 # Dump database into SQL file (command)
- mysqldump -u$db_user -p$db_password -h$db_host $db_name > $path/$db_name-$day.sql
+ mysqldump -u$db_user -p$db_password -h$db_host $db_name --skip-lock-tables > $path/$db_name-$day.sql
 
 # Record logs (command)
  echo "[monthly] backup $db_name is completed on $fulldate" >> $logs/MySQL-monthly-backup.log
