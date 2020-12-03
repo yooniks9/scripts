@@ -1,8 +1,5 @@
 #!/bin/bash
-# # MySQL/MariaDB Backup monthlu Scripts (MAX:6 backups/year) By: Roy Tan @ Tentencreative | Nov 7, 2016
-# Operating system variables (*required)
-user="ubuntu"
-
+# # MySQL/MariaDB Backup monthlu Scripts (MAX:6 backups/year) By: Roy Tan @ Yooniks Co., ltd | Dec 3, 2020
 # Database variables (*required)
 db_user="db_user"
 db_password="db_password"
@@ -10,8 +7,8 @@ db_host="127.0.0.1"
 db_name="db_name"
 
 # Backup path (DO NOT CHANGE)
-path="/home/$user/SQLbackup/$db_name-monthly"
-logs="/home/$user/logs"
+path="/home/$USER/SQLbackup/$db_name-daily"
+logs="/home/$USER/logs"
 
 # System time variables (DO NOT CHANGE)
 day=$(date +"%m.%d.%Y")

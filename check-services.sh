@@ -1,9 +1,6 @@
 #!/bin/sh
-# Operating system variables (*required)
-user="ubuntu"
-
 # Create logs directory
-logs="/home/$user/logs"
+logs="/srv/logs"
 mkdir -p $logs
 
 # System time variables (DO NOT CHANGE)
@@ -25,6 +22,24 @@ if [ $? != 0 ]
 then
 	/etc/init.d/docker restart > /dev/null
 	echo "[docker] service is down: $fulldate" >> $logs/services-status.log
+fi
+
+# Check nginx status
+ps auxw | grep /usr/sbin/nginx | grep -v grep > /dev/null
+
+if [ $? != 0 ]
+then
+        /etc/init.d/nginx restart > /dev/null
+        echo "[nginx] service is down: $fulldate" >> $logs/nginx-breakdown.log
+fi
+
+# Check mysql status
+ps auxw | grep /usr/sbin/mysqld | grep -v grep > /dev/null
+
+if [ $? != 0 ]
+then
+        /etc/init.d/mysql restart > /dev/null
+        echo "[mysql] service is down: $fulldate" >> $logs/mysql-breakdown.log
 fi
 
 # Wake up Docker (sometime it auto went idle)

@@ -1,7 +1,5 @@
 #!/bin/bash
-# MySQL/MariaDB Backup Daily Scripts (MAX:15 backups) By: Roy Tan @ Tentencreative | Nov 7, 2016
-# Operating system variables (*required)
-user="ubuntu"
+# MySQL/MariaDB Backup Daily Scripts (MAX:15 backups) By: Roy Tan @ Yooniks Co., ltd | Dec 3, 2020
 
 # Database variables (*required)
 db_user="db_user"
@@ -10,8 +8,8 @@ db_host="127.0.0.1"
 db_name="db_name"
 
 # Backup path (DO NOT CHANGE)
-path="/home/$user/SQLbackup/$db_name-daily"
-logs="/home/$user/logs"
+path="/home/$USER/SQLbackup/$db_name-daily"
+logs="/home/$USER/logs"
 
 # System time variables (DO NOT CHANGE)
 day=$(date +"%m.%d.%Y")

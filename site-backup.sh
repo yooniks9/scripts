@@ -1,8 +1,7 @@
 #!/bin/bash 
 
 #get the current date
-BACKUPTIME=`date +%d-%b-%Y` 
-USER=ubuntu
+BACKUPTIME=`date +%d-%b-%Y`
 
 #create a backup file using the current date in it's name
 DESTINATION=/home/$USER/backup/html-$BACKUPTIME.tar.gz 

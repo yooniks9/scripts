@@ -1,9 +1,6 @@
 ### edit the script, update your database variables
 
 ```
-# Operating system variables (*required)
- user="ubuntu"
-
 # Database variables (*required)
  db_user="db_user"
  db_password="db_password"
@@ -28,14 +25,12 @@
 0 0 1 * * /home/ubuntu/scripts/sql-monthly-backup.sh > /dev/null 2>&1
 ```
 
-### add into cronjob (root)
+### add into cronjob (root) run every 5 mins
 
 ```
 # sudo crontab -e
 ```
 
 ```
-* * * * * /home/ubuntu/scripts/monApache.sh > /dev/null 2>&1
-* * * * * /home/ubuntu/scripts/monNginx.sh > /dev/null 2>&1
-* * * * * /home/ubuntu/scripts/monMysql.sh > /dev/null 2>&1
+*/5 * * * * /home/ubuntu/scripts/check-services.sh > /dev/null 2>&1
 ```
