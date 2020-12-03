@@ -30,7 +30,7 @@ ps auxw | grep /usr/sbin/nginx | grep -v grep > /dev/null
 if [ $? != 0 ]
 then
         /etc/init.d/nginx restart > /dev/null
-        echo "[nginx] service is down: $fulldate" >> $logs/nginx-breakdown.log
+        echo "[nginx] service is down: $fulldate" >> $logs/services-status.log
 fi
 
 # Check mysql status
@@ -39,7 +39,7 @@ ps auxw | grep /usr/sbin/mysqld | grep -v grep > /dev/null
 if [ $? != 0 ]
 then
         /etc/init.d/mysql restart > /dev/null
-        echo "[mysql] service is down: $fulldate" >> $logs/mysql-breakdown.log
+        echo "[mysql] service is down: $fulldate" >> $logs/services-status.log
 fi
 
 # Wake up Docker (sometime it auto went idle)
