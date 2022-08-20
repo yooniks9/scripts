@@ -1,5 +1,7 @@
 #!/bin/bash
-
-while IFS='' read -r LINE || [ -n "${LINE}" ]; do
-    ps -Af | grep "${LINE}" | grep -v grep | awk '{print$2}' | xargs sudo kill -9
-done < blacklist
+fulldate=$(date +"%c")
+while read PROCESS; do
+if ps -Af | grep $PROCESS | grep -v grep | awk '{print$2}' |  xargs sudo kill -9 ; then
+  echo "$fulldate - [found] sick process killed" >> /srv/logs/health-check.log
+fi
+done < /srv/scripts/blacklist
